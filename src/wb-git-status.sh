@@ -18,7 +18,7 @@ REMOTE_STATUS=""
 
 if [[ $PROVIDER == "github.com" ]]; then
 
-  if ! command -v gh &> /dev/null; then
+  if ! command -v gh &>/dev/null; then
     exit 1
   fi
 
