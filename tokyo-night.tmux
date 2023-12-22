@@ -28,9 +28,9 @@ tmux set -g status-left "#[fg=#15161e,bg=#2b97fa,bold] #{?client_prefix,󰠠 ,#[
 
 #+--- Windows ---+
 # Focus
-tmux set -g window-status-current-format "#[fg=#44dfaf,bg=#1F2335]   #[fg=#a9b1d6,bg=#1F2335]$custom_number #[bold,nodim]#W#[nobold,dim]#{?window_zoomed_flag, $zoom_number, $custom_pane} "
+tmux set -g window-status-current-format "#[fg=#44dfaf,bg=#1F2335]   #[fg=#a9b1d6,bg=#1F2335]$custom_number #[bold,nodim]#W#[nobold,dim]# "
 # Unfocused
-tmux set -g window-status-format "#[fg=#c0caf5,bg=default,none,dim]   $custom_number #W#[nobold,dim]#{?window_zoomed_flag, $zoom_number, $custom_pane} "
+tmux set -g window-status-format "#[fg=#c0caf5,bg=default,none,dim]   $custom_number #W#[nobold,dim]# "
 
 #+--- Bars RIGHT ---+
 tmux set -g status-right "$cmus_status#[fg=#a9b1d6,bg=#24283B]  %Y-%m-%d #[]❬ %H:%M $git_status$wb_git_status"
