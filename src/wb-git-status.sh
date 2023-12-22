@@ -61,7 +61,14 @@ if [[ $REMOTE_DIFF > 0 ]]; then
 fi
 
 if [[ $PR_COUNT > 0 || $REVIEW_COUNT > 0 || $ISSUE_COUNT > 0 ]]; then
-  WB_STATUS="#[fg=#464646,bg=#15161e,bold] $PROVIDER_ICON $RESET$PR_STATUS$REVIEW_STATUS$ISSUE_STATUS$REMOTE_STATUS"
+  add_separator_r() {
+    local from_bg=$1
+    local to_bg=$2
+    echo "#[fg=$from_bg,bg=$to_bg]#[fg=#464646,bg=#15161e,bold] "
+  }
+
+  separator="$(add_separator_r "#15161e" "#24283B")"
+  WB_STATUS="$separator#[fg=#464646,bg=#15161e,bold]$PROVIDER_ICON $RESET$PR_STATUS$REVIEW_STATUS$ISSUE_STATUS$REMOTE_STATUS"
 fi
 
 echo "$WB_STATUS"
