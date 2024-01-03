@@ -2,7 +2,7 @@
 
 # Define color and style variables
 RESET_STYLE="#[fg=brightwhite,bg=#15161e,nobold,noitalics,nounderscore,nodim]"
-BG="#1A1B26"
+BG="#0C1116"
 LEFT_FG="#15161e"
 LEFT_BG="#6EA3FE"
 HIGHLIGHT="#FFAB56"
